@@ -14,7 +14,7 @@ namespace AnimalCrossing.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.0.0");
+                .HasAnnotation("ProductVersion", "3.1.0");
 
             modelBuilder.Entity("AnimalCrossing.Models.Cat", b =>
                 {
@@ -49,6 +49,39 @@ namespace AnimalCrossing.Migrations
                     b.ToTable("Cats");
                 });
 
+            modelBuilder.Entity("AnimalCrossing.Models.CatDate", b =>
+                {
+                    b.Property<int>("CatDateId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("GuestCatCatId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("GuestId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("HostCatCatId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("HostId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Location")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CatDateId");
+
+                    b.HasIndex("GuestCatCatId");
+
+                    b.HasIndex("HostCatCatId");
+
+                    b.ToTable("CatDates");
+                });
+
             modelBuilder.Entity("AnimalCrossing.Models.Species", b =>
                 {
                     b.Property<int>("SpeciesId")
@@ -74,6 +107,17 @@ namespace AnimalCrossing.Migrations
                         .HasForeignKey("SpeciesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("AnimalCrossing.Models.CatDate", b =>
+                {
+                    b.HasOne("AnimalCrossing.Models.Cat", "GuestCat")
+                        .WithMany()
+                        .HasForeignKey("GuestCatCatId");
+
+                    b.HasOne("AnimalCrossing.Models.Cat", "HostCat")
+                        .WithMany()
+                        .HasForeignKey("HostCatCatId");
                 });
 #pragma warning restore 612, 618
         }
