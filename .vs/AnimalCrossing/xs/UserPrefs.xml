@@ -1,19 +1,10 @@
 ﻿<Properties StartupConfiguration="{CDEE9E37-7DE4-48B5-9498-BED216134CA6}|Default">
   <MonoDevelop.Ide.ItemProperties.AnimalCrossing PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.ItemProperties.AnimalCrossingApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AnimalCrossing/Controllers/AnimalController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AnimalCrossing/Models/CatReview.cs">
     <Files>
-      <File FileName="AnimalCrossing/Controllers/AnimalController.cs" Line="62" Column="9" />
-      <File FileName="AnimalCrossing/Models/ViewModels/ViewModelCreator.cs" />
-      <File FileName="AnimalCrossing/Models/ViewModels/CatDetailsView.cs" />
-      <File FileName="AnimalCrossing/Views/Animal/EditCat2.cshtml" />
-      <File FileName="AnimalCrossing/Views/Animal/showCats.cshtml" />
-      <File FileName="AnimalCrossing/Models/AnimalRepository.cs" />
-      <File FileName="AnimalCrossing/Models/IAnimalRepository.cs" />
-      <File FileName="AnimalCrossing/Views/Animal/Thanks.cshtml" />
-      <File FileName="AnimalCrossing/Views/Shared/_ShowCatPartialView.cshtml" />
-      <File FileName="AnimalCrossing/Views/Shared/_catForm.cshtml" />
-      <File FileName="AnimalCrossing/Views/Animal/Create.cshtml" />
+      <File FileName="AnimalCrossing/Models/CatDate.cs" Line="3" Column="1" />
+      <File FileName="AnimalCrossing/Models/CatReview.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,11 +22,10 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="Controllers" expanded="True">
-                <Node name="AnimalController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="ViewModels" expanded="True" />
+                <Node name="CatReview.cs" selected="True" />
               </Node>
               <Node name="Views" expanded="True">
                 <Node name="Animal" expanded="True" />

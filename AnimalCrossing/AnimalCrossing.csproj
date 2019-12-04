@@ -29,5 +29,6 @@
   <ItemGroup>
     <Content Remove="Views\showCats.cshtml" />
     <Content Remove="Views\Animal\editCat.cshtml" />
+    <Content Remove="Models\CatDate.json" />
   </ItemGroup>
 </Project>
